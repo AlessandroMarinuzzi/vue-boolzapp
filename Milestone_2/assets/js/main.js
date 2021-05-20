@@ -90,6 +90,7 @@ const root = new Vue({
         ],
 
         changingImg:"",
+        changingName:"",
     },
 
     methods: {
@@ -102,7 +103,14 @@ const root = new Vue({
         changeContactImg(index){
             const profilePic = this.contacts[index].avatar;
             this.changingImg = `./assets/img/avatar${profilePic}.jpg`
+        },
+
+        changeName(index){
+            const changeName = this.contacts[index].name;
+            this.changingName = changeName
+            console.log(changingName);
         }
+
     }
 
     

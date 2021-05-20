@@ -56,7 +56,7 @@
             
             <!-- Contact_Section -->
             <ul id="contact_list" class="contacts bg_white">
-                <li class="contact" v-for="(contact, index) in contacts" @click="changeContactImg(index)">
+                <li class="contact" v-for="(contact, index) in contacts" @click="changeContactImg(index), changeName(index)">
                     <div class="contact_img">
                         <img :src="getContactImg(index)" class="user_img" alt="">
                     </div>
@@ -80,7 +80,7 @@
                             <img :src="changingImg" class="user_img" alt="">
                         </div>
                         <div class="active_contactName">
-                            <span>Michele</span>
+                            <span>{{changingName}}</span>
                             <span class="access_time color_darkgrey">Ultimo accesso oggi alle</span>
                         </div>
                     </div>

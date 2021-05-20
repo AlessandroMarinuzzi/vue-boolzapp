@@ -5,7 +5,7 @@
 }
 
 body{
-    /* height: 100vh; */
+    height: 100vh;
     background: rgb(210,219,220);
     background: linear-gradient(0deg, rgba(210,219,220,1) 0%, rgba(221,219,209,1) 85%, rgba(0,150,136,1) 85%, rgba(0,150,136,1) 100%);
 }
@@ -26,6 +26,9 @@ background-color: #8edafc;
 }
 .color_darkgrey{
     color: grey;
+}
+input:focus-visible {
+    outline: 0;
 }
 /* /Utility Classe */
 
@@ -51,7 +54,7 @@ background-color: #8edafc;
 }
 #sidebar_header{
     width: 100%;
-    height: 78px;
+    height: 83px;
     background-color: #eaeaea;
 }
 
@@ -156,7 +159,7 @@ background-color: #8edafc;
 }
 #main_header{
     width: 100%;
-    height: 78px;
+    height: 83px;
     background-color: #eaeaea;
     display: flex;
     justify-content: space-between;
@@ -180,7 +183,7 @@ background-color: #8edafc;
 /* Type messagge section */
 .type{
     width: 100%;
-    height: 78px;
+    height: 83px;
     background-color: #f3eeea;
     position: absolute;
     bottom: 0;

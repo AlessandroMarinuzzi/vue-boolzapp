@@ -5,7 +5,7 @@
 }
 
 body{
-    height: 100vh;
+    /* height: 100vh; */
     background-color: lightgray;
 }
 
@@ -28,6 +28,9 @@ background-color: #8edafc;
 .color_grey{
     color: lightgrey;
 }
+.color_darkgrey{
+    color: grey;
+}
 /* /Utility Classe */
 
 /* App main body */
@@ -48,6 +51,7 @@ background-color: #8edafc;
     display: flex;
     flex-direction: column;
     font-size: 14px;
+    border-right: 1px solid lightgrey;
 }
 
 /* User section */
@@ -97,7 +101,9 @@ background-color: #8edafc;
     display: flex;
     flex-direction: column;
     margin-right: auto;
-    
+}
+.turnOnNotes>a{
+    font-size: 12px;
 }
 /* /Notifications */
 

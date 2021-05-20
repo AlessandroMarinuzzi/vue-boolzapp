@@ -33,7 +33,7 @@ background-color: #8edafc;
 /* App main body */
 .container{
     width: 80%;
-    height: 90%;
+    /* height: 90%; */
     margin: 10px auto;
     background-color: white;
     display: flex;

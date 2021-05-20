@@ -1,4 +1,4 @@
-const root = new VUE({
+const root = new Vue({
     el:"#root",
 
     data:{
@@ -89,6 +89,14 @@ const root = new VUE({
             },
         ]
     },
+
+    methods: {
+        getContactImg(index) {
+            const contact = this.contacts[index];
+            const imgPath = `./assets/img/avatar${contact.avatar}.jpg`;
+            return imgPath
+        }
+    }
 
     
 })

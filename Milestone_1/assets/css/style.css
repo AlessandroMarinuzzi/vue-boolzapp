@@ -123,6 +123,16 @@ background-color: #8edafc;
 }
 /* /SearchBar */
 
+/* Contacts List */
+.contact{
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgrey;
+}
+/* /Contacts List */
+
+
 /* /Sidebar */
 
 

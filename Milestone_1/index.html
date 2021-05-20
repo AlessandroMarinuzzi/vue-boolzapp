@@ -55,9 +55,14 @@
             <!-- /Search_Contact -->
             
             <!-- Contact_Section -->
-            <div class="contacts">
-                contacts
-            </div>
+            <ul id="contact_list" class="contacts bg_white">
+                <li class="contact" v-for="(contact, index) in contacts">
+                    <div class="contact_img">
+                        <img :src="getContactImg(index)" class="user_img" alt="">
+                    </div>
+                    <span>{{contact.name}}</span>
+                </li>
+            </ul>
             <!-- /Contact_Section -->
 
         </aside>

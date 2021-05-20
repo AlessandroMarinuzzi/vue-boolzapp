@@ -87,7 +87,9 @@ const root = new Vue({
                     }
                 ],
             },
-        ]
+        ],
+
+        changingImg:"",
     },
 
     methods: {
@@ -95,6 +97,11 @@ const root = new Vue({
             const contact = this.contacts[index];
             const imgPath = `./assets/img/avatar${contact.avatar}.jpg`;
             return imgPath
+        },
+    
+        changeContactImg(index){
+            const profilePic = this.contacts[index].avatar;
+            this.changingImg = `./assets/img/avatar${profilePic}.jpg`
         }
     }
 

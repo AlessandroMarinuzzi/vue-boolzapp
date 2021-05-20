@@ -51,7 +51,7 @@ background-color: #8edafc;
 }
 #sidebar_header{
     width: 100%;
-    height: 85px;
+    height: 78px;
     background-color: #eaeaea;
 }
 
@@ -156,7 +156,7 @@ background-color: #8edafc;
 }
 #main_header{
     width: 100%;
-    height: 85px;
+    height: 78px;
     background-color: #eaeaea;
     display: flex;
     justify-content: space-between;
@@ -180,7 +180,7 @@ background-color: #8edafc;
 /* Type messagge section */
 .type{
     width: 100%;
-    height: 85px;
+    height: 78px;
     background-color: #f3eeea;
     position: absolute;
     bottom: 0;

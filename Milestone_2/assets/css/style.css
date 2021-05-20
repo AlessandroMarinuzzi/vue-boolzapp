@@ -177,7 +177,35 @@ input:focus-visible {
 /* /Main_Header */
 
 /* Main Active Chat section */
-/* ************************* */
+.active_chat{
+    display: flex;
+    flex-direction: column;
+}
+.messages{
+    display: flex;
+    flex-direction: column;
+}
+.sent{
+    background-color: lightgreen;
+    padding: 15px 10px;
+    align-self: flex-end;
+    margin: 20px 80px;
+    border: 0.5px solid grey;
+    border-radius: 10px;
+}
+
+.received{
+    background-color: white;
+    padding: 15px 10px;
+    align-self: flex-start;
+    margin: 20px 80px;
+    border: 0.5px solid grey;
+    border-radius: 10px;
+}
+
+.date{
+    font-size: 10px;
+}
 /* /Main Active Chat section */
 
 /* Type messagge section */

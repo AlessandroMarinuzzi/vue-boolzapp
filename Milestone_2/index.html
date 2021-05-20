@@ -56,7 +56,7 @@
             
             <!-- Contact_Section -->
             <ul id="contact_list" class="contacts bg_white">
-                <li class="contact" v-for="(contact, index) in contacts" @click="changeContactImg(index), changeName(index)">
+                <li class="contact" v-for="(contact, index) in contacts" @click="changeContactImg(index), changeName(index), selectContact(index)">
                     <div class="contact_img">
                         <img :src="getContactImg(index)" class="user_img" alt="">
                     </div>
@@ -96,7 +96,11 @@
 
             <!-- Active Chat section -->
             <div class="active_chat">
-
+                <div class="messages" 
+                v-for="message in selectedContact.messages"
+                :class="{ sent : message.status === 'sent', received : message.status === 'received' }">
+                    {{message.text}}
+                </div>
             </div>
             <!-- Active Chat section -->
 

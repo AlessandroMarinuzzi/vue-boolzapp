@@ -91,6 +91,7 @@ const root = new Vue({
 
         changingImg:"",
         changingName:"",
+        selectedContact:"",
     },
 
     methods: {
@@ -108,8 +109,14 @@ const root = new Vue({
         changeName(index){
             const changeName = this.contacts[index].name;
             this.changingName = changeName
-            console.log(changingName);
+            console.log(this.changingName);
+        },
+
+        selectContact(index){
+            this.selectedContact = this.contacts[index]
+            console.log(this.selectedContact);
         }
+
 
     },
 

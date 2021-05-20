@@ -111,6 +111,12 @@ const root = new Vue({
             console.log(changingName);
         }
 
+    },
+
+    mounted() {
+        const firstContact = this.contacts[0];
+        this.changingImg = `./assets/img/avatar${firstContact.avatar}.jpg`;
+        this.changingName = this.contacts[0].name
     }
 
     

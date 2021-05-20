@@ -17,7 +17,7 @@
         <aside class="sidebar">
 
             <!-- Sidebar_header -->
-            <header id="sidebar_header">
+            <div id="sidebar_header">
                 <div class="user">
                     <div class="contact_img">
                         <img src="./assets/Img/avatar_8.jpg" class="user_img" alt="">
@@ -25,12 +25,12 @@
                     <div class="username">Sandro</div>
                 </div>
 
-                <div class="controls color_grey">
+                <div class="controls color_darkgrey">
                     <i class="fas fa-circle-notch"></i>
                     <i class="fas fa-comment-alt"></i>
                     <i class="fas fa-ellipsis-v"></i>
                 </div>
-            </header>
+            </div>
             <!-- /Sidebar_header -->
 
             <!-- Notes_section -->
@@ -60,7 +60,7 @@
                     <div class="contact_img">
                         <img :src="getContactImg(index)" class="user_img" alt="">
                     </div>
-                    <span>{{contact.name}}</span>
+                    <span class="contact_name">{{contact.name}}</span>
                 </li>
             </ul>
             <!-- /Contact_Section -->
@@ -72,9 +72,41 @@
 
 
         <main id="site_main">
-            <header id="main_header">
+            <!-- Main Header Active Contact -->
+            <div id="main_header">
                 
-            </header>
+                    <div class="user">
+                        <div class="contact_img">
+                            <img src="./assets/Img/avatar_1.jpg" class="user_img" alt="">
+                        </div>
+                        <div class="active_contactName">
+                            <span>Michele</span>
+                            <span class="access_time color_darkgrey">Ultimo accesso oggi alle</span>
+                        </div>
+                    </div>
+    
+                    <div class="controls color_darkgrey">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                
+            </div>
+            <!-- /Main Header Active Contact -->
+
+            <!-- Active Chat section -->
+            <div class="active_chat">
+
+            </div>
+            <!-- Active Chat section -->
+
+            <!-- Type Section -->
+            <div class="type">
+                
+            </div>
+            <!-- /Type Section -->
+
+
         </main>
     </div>
 

@@ -137,6 +137,9 @@ background-color: #8edafc;
     border-bottom: 1px solid lightgrey;
     font-size: 18px;
 }
+.contact:hover{
+    background-color: lightgrey;
+}
 .contact_name{
     margin-left: 15px;
 }
@@ -175,12 +178,26 @@ background-color: #8edafc;
 
 /* Type messagge section */
 .type{
+    width: 100%;
     height: 85px;
-    background-color: white;
+    background-color: #f3eeea;
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.type>i {
+    font-size: 25px;
+}
+#msgBar{
+    width: 80%;
+    font-size: 18px;
+    border-style: none;
+    padding: 10px;
+    border-radius: 5px;
 }
 /* Type messagge section */
 

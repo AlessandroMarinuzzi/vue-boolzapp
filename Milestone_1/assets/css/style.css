@@ -19,4 +19,14 @@ body{
 }
 /* /App main body */
 
+/* Sidebar */
+.sidebar{
+    height: 100%;
+    width: 340px;
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+}
+/* /Sidebar */
+
 

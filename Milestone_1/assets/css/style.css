@@ -49,11 +49,38 @@ background-color: #8edafc;
     flex-direction: column;
     font-size: 14px;
 }
+
+/* User section */
+#sidebar_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user{
+    display: flex;
+    align-items: center ;
+    
+}
+.user_img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.controls{
+    margin-right: 5px;
+}
+.controls > i{
+    font-size: 20px;
+    margin-right: 15px;
+}
+/* /User section */
+
 /* Notifications */
 .notes{
     height: 70px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .bell {
@@ -64,11 +91,12 @@ background-color: #8edafc;
     font-size: 18px;
     border-radius: 50%;
     padding: 15px;
-    margin-right: 15px;
+    margin:0 15px;
 }
 .turnOnNotes{
     display: flex;
     flex-direction: column;
+    margin-right: auto;
     
 }
 /* /Notifications */
@@ -93,7 +121,6 @@ background-color: #8edafc;
     border-style: none;
     padding: 5px;
 }
-
 /* /SearchBar */
 
 /* /Sidebar */

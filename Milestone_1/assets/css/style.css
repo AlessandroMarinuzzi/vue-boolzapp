@@ -9,6 +9,20 @@ body{
     background-color: lightgray;
 }
 
+/* Utility Classe */
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #eaeaea;
+}
+.light_turquoise{
+background-color: #8edafc;
+}
+.bg_white{
+    background-color: white;
+}
+/* /Utility Classe */
+
 /* App main body */
 .container{
     width: 80%;
@@ -23,7 +37,30 @@ body{
 .sidebar{
     height: 100%;
     width: 340px;
-    background-color: lightskyblue;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+}
+
+.notes{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bell {
+    color: #8ddbfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 50%;
+    padding: 15px;
+    margin-right: 15px;
+}
+
+.turnOnNotes{
     display: flex;
     flex-direction: column;
 }

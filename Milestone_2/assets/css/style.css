@@ -7,7 +7,8 @@
 body{
     height: 100vh;
     background: rgb(210,219,220);
-    background: linear-gradient(0deg, rgba(210,219,220,1) 0%, rgba(221,219,209,1) 85%, rgba(0,150,136,1) 85%, rgba(0,150,136,1) 100%);
+    /* background: linear-gradient(0deg, rgba(210,219,220,1) 0%, rgba(221,219,209,1) 85%, rgba(0,150,136,1) 85%, rgba(0,150,136,1) 100%); */
+    background-image: linear-gradient(to bottom, #009688 0px, #009688 93px, #d3d3d3 93px, #d3d3d3 100%);
 }
 
 /* Utility Classe */
@@ -208,6 +209,7 @@ input:focus-visible {
 
 .date{
     font-size: 10px;
+    margin-left: auto;
 }
 /* /Main Active Chat section */
 

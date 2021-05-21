@@ -100,7 +100,7 @@
                 v-for="message in selectedContact.messages"
                 :class="{ sent : message.status === 'sent', received : message.status === 'received' }">
                     {{message.text}}
-                    <span class="date color_darkgrey">{{ new Date() }}</span>
+                    <span class="date color_darkgrey">{{ message.date}}</span>
                 </div>
                 
             </div>

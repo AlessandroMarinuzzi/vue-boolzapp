@@ -122,19 +122,40 @@ const root = new Vue({
             console.log(this.selectedContact);
         },
 
+        getCurrentTime() {
+            const currentTime = dayjs().format('DD/MM/YYYY HH:mm:ss');
+            return currentTime
+        },
+
         sendMessage(){
             this.selectedContact.messages.push({
-                date: "",
+                date: root.getCurrentTime(),
                 text: this.msgBar,
                 status: 'sent'
             })
+            this.msgBar = "";
+
+            this.receiveMessage();
+        },
+
+        receiveMessage() {
+            setTimeout(function () {
+                root.selectedContact.messages.push(
+                    {
+                        date: root.getCurrentTime(),
+                        text: 'Ok',
+                        status: 'received'
+                    }
+                );
+            }, 1000);
         }
+
 
     },
 
     mounted() {
-        const firstContact = this.contacts[0];
-        this.changingImg = `./assets/img/avatar${firstContact.avatar}.jpg`;
+        this.selectedContact = this.contacts[0];
+        this.changingImg = `./assets/img/avatar${this.selectedContact.avatar}.jpg`;
         this.changingName = this.contacts[0].name;
     }
 

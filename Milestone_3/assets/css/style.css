@@ -8,7 +8,7 @@ body{
     height: 100vh;
     background: rgb(210,219,220);
     /* background: linear-gradient(0deg, rgba(210,219,220,1) 0%, rgba(221,219,209,1) 85%, rgba(0,150,136,1) 85%, rgba(0,150,136,1) 100%); */
-    background-image: linear-gradient(to bottom, #009688 0px, #009688 93px, #d3d3d3 93px, #d3d3d3 100%);
+    background-image: linear-gradient(to bottom, #009688 0px, #009688 84px, #d3d3d3 84px, #d3d3d3 100%);
 }
 
 /* Utility Classe */
@@ -56,7 +56,7 @@ input:focus-visible {
 /* User section */
 #sidebar_header{
     width: 100%;
-    height: 121px;
+    height: 100px;
     background-color: #eaeaea;
     display: flex;
     justify-content: space-between;
@@ -84,10 +84,11 @@ input:focus-visible {
 
 /* Notifications */
 .notes{
-    height: 90px;
+    height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 5px;
 }
 .bell {
     color: #8ddbfc;
@@ -102,7 +103,6 @@ input:focus-visible {
 .turnOnNotes{
     display: flex;
     flex-direction: column;
-    margin-right: 5px;
 }
 .turnOnNotes>a{
     font-size: 12px;
@@ -156,7 +156,7 @@ input:focus-visible {
 #site_main{
     width: 100%;
     background-image: url("../Img/mine.jpg");
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
 }
@@ -218,11 +218,11 @@ input:focus-visible {
 /* Type messagge section */
 .type{
     width: 100%;
-    height: 83px;
+    height: 100px;
     background-color: #f3eeea;
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    right: 0;
+    right: 0; */
     display: flex;
     justify-content: space-around;
     align-items: center;

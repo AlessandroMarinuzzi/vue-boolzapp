@@ -49,14 +49,14 @@
             <div class="search_section bg_grey">
                 <div class="searchbar bg_white">
                     <i class="fas fa-search color_grey"></i>
-                    <input class="search" type="text" id="search" v-model="searchedContact" placeholder="Cerca o inizia una nuova chat" @keyup="search" >
+                    <input class="search" type="text" id="search" v-model="searchedContacts" placeholder="Cerca o inizia una nuova chat" @keyup="search" >
                 </div>
             </div>
             <!-- /Search_Contact -->
             
             <!-- Contact_Section -->
             <ul id="contact_list" class="contacts bg_white">
-                <li class="contact" v-for="(contact, index) in filteredContacts" @click="changeContactImg(index), changeName(index), selectContact(index)">
+                <li class="contact" v-for="(contact, index) in contacts" v-if="contact.visible" @click="changeContactImg(index), changeName(index), selectContact(index)">
                     <div class="contact_img">
                         <img :src="getContactImg(index)" class="user_img" alt="">
                     </div>

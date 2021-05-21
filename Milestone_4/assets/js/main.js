@@ -99,7 +99,7 @@ const root = new Vue({
         msgBar:"",
         // **********************************************
         searchedContacts:"",
-        filteredContact:"",
+        // filteredContact:"",
         // ********************************************
     },
 
@@ -155,9 +155,19 @@ const root = new Vue({
         },
         // *************************************************
         search(){
-            this.filteredContacts = this.contacts.filter(contact => {
-                return contact.name.toLowerCase().includes(this.searchedContacts.toLowerCase())
+            let searchedContact = this.searchedContacts.toLowerCase();
+            console.log(this.searchedContacts);
+            this.contacts.forEach((el)=>{
+                let savedName = el.name.toLowerCase()
+                if(savedName.includes(searchedContact)){
+                    el.visible = true
+                    
+                } else {
+                        el.visible = false
+                        
+                    }
             })
+          
         },
         // *****************************************************
     },
@@ -167,7 +177,7 @@ const root = new Vue({
         this.changingImg = `./assets/img/avatar${this.selectedContact.avatar}.jpg`;
         this.changingName = this.contacts[0].name;
 
-        this.filteredContacts = this.contacts;
+        // this.filteredContacts = this.contacts;
     }
     
     

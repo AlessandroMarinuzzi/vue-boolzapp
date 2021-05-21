@@ -157,6 +157,8 @@ const root = new Vue({
         this.selectedContact = this.contacts[0];
         this.changingImg = `./assets/img/avatar${this.selectedContact.avatar}.jpg`;
         this.changingName = this.contacts[0].name;
+
+        
     }
 
     

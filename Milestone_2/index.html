@@ -20,9 +20,9 @@
             <div id="sidebar_header">
                 <div class="user">
                     <div class="contact_img">
-                        <img src="./assets/Img/avatar_8.jpg" class="user_img" alt="">
+                        <img :src="userImg" class="user_img" alt="">
                     </div>
-                    <div class="username">Sandro</div>
+                    <div class="username">{{username}}</div>
                 </div>
 
                 <div class="controls color_darkgrey">
@@ -49,7 +49,7 @@
             <div class="search_section bg_grey">
                 <div class="searchbar bg_white">
                     <i class="fas fa-search color_grey"></i>
-                    <input type="text" id="search" placeholder="Cerca o inizia una nuova chat">
+                    <input class="search" type="text" id="search" placeholder="Cerca o inizia una nuova chat">
                 </div>
             </div>
             <!-- /Search_Contact -->

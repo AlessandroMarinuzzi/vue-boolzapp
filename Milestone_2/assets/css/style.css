@@ -124,6 +124,9 @@ input:focus-visible {
     display: flex;
     align-items: center;
 }
+.search {
+    width: 100%;
+}
 .searchbar > i {
     margin: 0 10px;
 }

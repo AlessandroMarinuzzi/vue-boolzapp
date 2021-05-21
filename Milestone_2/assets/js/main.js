@@ -2,6 +2,10 @@ const root = new Vue({
     el:"#root",
 
     data:{
+        username: "Sandro",
+        userImg: "./assets/img/avatar_io.jpg",
+        visible: true,
+        
         contacts: [
             {
                 name: 'Michele',

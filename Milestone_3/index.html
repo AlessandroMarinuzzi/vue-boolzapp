@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"/>
+    <title>Boolzapp</title>
+</head>
+<body>
+    <div id="root" class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <!-- Sidebar_header -->
+            <div id="sidebar_header">
+                <div class="user">
+                    <div class="contact_img">
+                        <img :src="userImg" class="user_img" alt="">
+                    </div>
+                    <div class="username">{{username}}</div>
+                </div>
+
+                <div class="controls color_darkgrey">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <!-- /Sidebar_header -->
+
+            <!-- Notes_section -->
+            <div class="notes light_turquoise">
+                <div class="bell bg_white">
+                    <i class="fas fa-bell-slash"></i>
+                </div>
+                <div class="turnOnNotes">
+                    <span>Ricevi notifiche di nuovi messaggi</span>
+                    <a href="#" class="color_darkgrey">Attiva notifiche desktop</a>
+                </div>
+            </div>
+            <!-- /Notes_section -->
+
+            <!-- Search_Contact -->
+            <div class="search_section bg_grey">
+                <div class="searchbar bg_white">
+                    <i class="fas fa-search color_grey"></i>
+                    <input class="search" type="text" id="search" placeholder="Cerca o inizia una nuova chat">
+                </div>
+            </div>
+            <!-- /Search_Contact -->
+            
+            <!-- Contact_Section -->
+            <ul id="contact_list" class="contacts bg_white">
+                <li class="contact" v-for="(contact, index) in contacts" @click="changeContactImg(index), changeName(index), selectContact(index)">
+                    <div class="contact_img">
+                        <img :src="getContactImg(index)" class="user_img" alt="">
+                    </div>
+                    <span class="contact_name">{{contact.name}}</span>
+                </li>
+            </ul>
+            <!-- /Contact_Section -->
+
+        </aside>
+        <!-- /Sidebar -->
+
+
+
+
+        <main id="site_main">
+            <!-- Main Header Active Contact -->
+            <div id="main_header">
+                
+                    <div class="user">
+                        <div class="contact_img">
+                            <img :src="changingImg" class="user_img" alt="">
+                        </div>
+                        <div class="active_contactName">
+                            <span>{{changingName}}</span>
+                            <span class="access_time color_darkgrey">Ultimo accesso oggi alle</span>
+                        </div>
+                    </div>
+    
+                    <div class="controls color_darkgrey">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                
+            </div>
+            <!-- /Main Header Active Contact -->
+
+            <!-- Active Chat section -->
+            <div class="active_chat">
+                <div class="messages" 
+                v-for="message in selectedContact.messages"
+                :class="{ sent : message.status === 'sent', received : message.status === 'received' }">
+                    {{message.text}}
+                    <span class="date color_darkgrey">{{ message.date}}</span>
+                </div>
+                
+            </div>
+            <!-- Active Chat section -->
+
+            <!-- Type Section -->
+            <div class="type">
+                <i class="far fa-smile color_darkgrey"></i>
+                <input type="text" id="msgBar" placeholder="Scrivi un messaggio">
+                <i class="fas fa-microphone color_darkgrey"></i>
+            </div>
+            <!-- /Type Section -->
+
+
+        </main>
+    </div>
+
+    <!-- VUE JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- My JS -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

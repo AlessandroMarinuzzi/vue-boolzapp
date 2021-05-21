@@ -97,6 +97,10 @@ const root = new Vue({
         changingName:"",
         selectedContact:"",
         msgBar:"",
+        // **********************************************
+        searchedContacts:"",
+        filteredContact:"",
+        // ********************************************
     },
 
     methods: {
@@ -148,9 +152,14 @@ const root = new Vue({
                     }
                 );
             }, 1000);
-        }
-
-
+        },
+        // *************************************************
+        search(){
+            this.filteredContacts = this.contacts.filter(contact => {
+                return contact.name.toLowerCase().includes(this.searchedContacts.toLowerCase())
+            })
+        },
+        // *****************************************************
     },
 
     mounted() {
@@ -158,8 +167,8 @@ const root = new Vue({
         this.changingImg = `./assets/img/avatar${this.selectedContact.avatar}.jpg`;
         this.changingName = this.contacts[0].name;
 
-        
+        this.filteredContacts = this.contacts;
     }
-
+    
     
 })

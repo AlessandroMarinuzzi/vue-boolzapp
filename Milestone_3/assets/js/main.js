@@ -96,6 +96,7 @@ const root = new Vue({
         changingImg:"",
         changingName:"",
         selectedContact:"",
+        msgBar:"",
     },
 
     methods: {
@@ -119,8 +120,15 @@ const root = new Vue({
         selectContact(index){
             this.selectedContact = this.contacts[index]
             console.log(this.selectedContact);
-        }
+        },
 
+        sendMessage(){
+            this.selectedContact.messages.push({
+                date: "",
+                text: this.msgBar,
+                status: 'sent'
+            })
+        }
 
     },
 

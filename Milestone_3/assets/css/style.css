@@ -184,6 +184,7 @@ input:focus-visible {
 .active_chat{
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
 }
 .messages{
     display: flex;

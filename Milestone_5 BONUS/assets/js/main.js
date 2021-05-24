@@ -202,12 +202,17 @@ const root = new Vue({
         // this.filteredContacts = this.contacts;
 
         // ATTEMPT TO SHUT ALL DROPDOWN MENUS ON ANY CLICK
-        document.addEventListener("click",function(event){
-            let menu = document.querySelectorAll(".dropdown_menu");
+        document.addEventListener('click', function (event) {
+            const menu = document.querySelectorAll(".dropdown_menu");
+            
+            if (event.target.classList.contains('dropdown-arrow') || event.target.classList.contains('delete_message')) {
+                return
+            };
 
             menu.forEach(dropdown => {
-                if (dropdown.style.display=== "flex"){
-                    dropdown.style.display=""
+                /* console.log(dropdown.style.display); */
+                if (dropdown.style.display === 'flex') {
+                    dropdown.style.display = 'none';
                 }
             });
         }, true);

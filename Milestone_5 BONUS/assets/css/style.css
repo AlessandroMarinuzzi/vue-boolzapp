@@ -153,6 +153,10 @@ input:focus-visible {
 .last_msg{
     font-size: 15px;
 }
+.last_msgTime{
+    white-space: nowrap;
+    margin-right: 5px;
+}
 /* /Contacts List */
 /* /Sidebar */
 

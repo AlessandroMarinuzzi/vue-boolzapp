@@ -189,10 +189,12 @@ input:focus-visible {
 .messages{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
+
 .sent{
     background-color: lightgreen;
-    padding: 15px 10px;
+    padding: 20px;
     align-self: flex-end;
     margin: 20px 80px;
     border: 0.5px solid grey;
@@ -201,7 +203,7 @@ input:focus-visible {
 
 .received{
     background-color: white;
-    padding: 15px 10px;
+    padding: 20px;
     align-self: flex-start;
     margin: 20px 80px;
     border: 0.5px solid grey;
@@ -212,6 +214,37 @@ input:focus-visible {
     font-size: 10px;
     margin-left: auto;
 }
+
+.messages .dropdown-arrow{
+    position: absolute;
+    right: 4px;
+    top: 2px;
+    display: none;
+}
+
+.messages:hover .dropdown-arrow{
+    display: block;
+}
+
+.dropdown_menu{
+    /* display: flex; */
+    flex-direction: column;
+    position: absolute;
+    right:8px;
+    border: 0.5px solid lightgrey;
+    background-color: white;
+    padding: 5px;
+    display: none;
+}
+.dropdown_menu > span {
+    padding:10px 5px;
+    white-space: nowrap;
+}
+.dropdown_menu > span:hover{
+    background-color: lightgrey;
+}
+
+
 /* /Main Active Chat section */
 
 /* Type messagge section */

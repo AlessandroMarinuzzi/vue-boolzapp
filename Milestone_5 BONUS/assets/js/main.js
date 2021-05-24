@@ -170,6 +170,16 @@ const root = new Vue({
           
         },
         // *****************************************************
+
+        dropMenu(index){
+            let menu = document.querySelectorAll(".dropdown_menu");
+            console.log(menu);
+            if(menu[index].style.display === "" || menu[index].style.display === "none"){
+                menu[index].style.display = "flex"
+            } else if (menu[index].style.display === "flex"){
+                menu[index].style.display = "none"
+            }
+        }
     },
 
     mounted() {

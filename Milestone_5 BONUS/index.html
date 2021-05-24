@@ -98,10 +98,16 @@
             <!-- Active Chat section -->
             <div class="active_chat">
                 <div class="messages" 
-                v-for="message in selectedContact.messages"
+                v-for="(message, index) in selectedContact.messages"
                 :class="{ sent : message.status === 'sent', received : message.status === 'received' }">
-                    {{message.text}}
+                    <i class="fas fa-chevron-down dropdown-arrow color_darkgrey" @click="dropMenu(index)"></i>
+                    <span class="message">{{message.text}}</span>
                     <span class="date color_darkgrey">{{ message.date}}</span>
+
+                    <div class="dropdown_menu">
+                        <span>Message Info</span>
+                        <span>Delete Message</span>
+                    </div>
                 </div>
                 
             </div>

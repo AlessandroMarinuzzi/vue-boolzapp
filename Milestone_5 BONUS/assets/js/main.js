@@ -119,7 +119,7 @@ const root = new Vue({
             const changeName = this.contacts[index].name;
             this.changingName = changeName
             console.log(this.changingName);
-        },
+            },
 
         selectContact(index){
             this.selectedContact = this.contacts[index]
@@ -136,10 +136,12 @@ const root = new Vue({
                 date: root.getCurrentTime(),
                 text: this.msgBar,
                 status: 'sent'
+
             })
             this.msgBar = "";
 
             this.receiveMessage();
+            // console.log(selectedContact);
         },
 
         receiveMessage() {
@@ -184,30 +186,32 @@ const root = new Vue({
 
         deletemsg(index){
             this.selectedContact.messages.splice(index, 1);
-            
+            let menu = document.querySelectorAll(".dropdown_menu");
+            menu[index].style.display = "none"
         },
 
-
-        
     },
 
     mounted() {
         this.selectedContact = this.contacts[0];
         this.changingImg = `./assets/img/avatar${this.selectedContact.avatar}.jpg`;
         this.changingName = this.contacts[0].name;
+        
 
+
+        // this.filteredContacts = this.contacts;
 
         // ATTEMPT TO SHUT ALL DROPDOWN MENUS ON ANY CLICK
-        // this.filteredContacts = this.contacts;
-        // document.addEventListener("click",function(){
-        //     let menu = document.querySelectorAll(".dropdown_menu");
+        document.addEventListener("click",function(event){
+            let menu = document.querySelectorAll(".dropdown_menu");
 
-        //     menu.forEach(dropdown => {
-        //         if (dropdown.style.display=== "flex"){
-        //             dropdown.style.display=""
-        //         }
-        //     });
-        // }, true);
+            menu.forEach(dropdown => {
+                if (dropdown.style.display=== "flex"){
+                    dropdown.style.display=""
+                }
+            });
+        }, true);
+        
         // document.addEventListener("click",function(){
         //     document.querySelectorAll(".dropdown_menu").style.display = "none"
         // }, true);

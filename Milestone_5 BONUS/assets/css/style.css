@@ -144,8 +144,14 @@ input:focus-visible {
 .contact:hover{
     background-color: lightgrey;
 }
-.contact_name{
+.contact_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     margin-left: 15px;
+}
+.last_msg{
+    font-size: 15px;
 }
 /* /Contacts List */
 /* /Sidebar */

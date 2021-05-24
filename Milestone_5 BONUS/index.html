@@ -60,7 +60,11 @@
                         <div class="contact_img">
                             <img :src="getContactImg(index)" class="user_img" alt="">
                         </div>
-                        <span class="contact_name">{{contact.name}}</span>
+                        <div class="contact_box">
+                            <span class="contact_name">{{contact.name}}</span>
+                            <div class="last_msg color_darkgrey">{{contacts[index].messages[contacts[index].messages.length-1].text}}</div>
+                        </div>
+                        <span class="last_msgTime date color_darkgrey">{{contacts[index].messages[contacts[index].messages.length-1].date}}</span>
                     </li>
                 </ul>
                 <!-- /Contact_Section -->
@@ -82,7 +86,7 @@
                         </div>
                         <div class="active_contactName">
                             <span>{{changingName}}</span>
-                            <span class="access_time color_darkgrey">Ultimo accesso oggi alle</span>
+                            <span class="access_time color_darkgrey">Ultimo accesso oggi alle {{selectedContact.messages[selectedContact.messages.length -1].date}}</span>
                         </div>
                     </div>
     

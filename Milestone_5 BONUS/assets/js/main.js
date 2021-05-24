@@ -176,10 +176,19 @@ const root = new Vue({
             console.log(menu);
             if(menu[index].style.display === "" || menu[index].style.display === "none"){
                 menu[index].style.display = "flex"
+                console.log(menu[index].style.display);
             } else if (menu[index].style.display === "flex"){
                 menu[index].style.display = "none"
             }
-        }
+        },
+
+        deletemsg(index){
+            this.selectedContact.messages.splice(index, 1);
+            
+        },
+
+
+        
     },
 
     mounted() {
@@ -187,9 +196,22 @@ const root = new Vue({
         this.changingImg = `./assets/img/avatar${this.selectedContact.avatar}.jpg`;
         this.changingName = this.contacts[0].name;
 
+
+        // ATTEMPT TO SHUT ALL DROPDOWN MENUS ON ANY CLICK
         // this.filteredContacts = this.contacts;
+        // document.addEventListener("click",function(){
+        //     let menu = document.querySelectorAll(".dropdown_menu");
+
+        //     menu.forEach(dropdown => {
+        //         if (dropdown.style.display=== "flex"){
+        //             dropdown.style.display=""
+        //         }
+        //     });
+        // }, true);
+        // document.addEventListener("click",function(){
+        //     document.querySelectorAll(".dropdown_menu").style.display = "none"
+        // }, true);
     }
     
     
 })
-// 

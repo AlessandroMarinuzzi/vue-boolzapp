@@ -95,7 +95,12 @@ const root = new Vue({
 
         changingImg:"",
         changingName:"",
-        selectedContact:"",
+        selectedContact:{
+            name: '',
+            avatar: '',
+            visible: true,
+            messages:[{}]
+        },
         msgBar:"",
         // **********************************************
         searchedContacts:"",

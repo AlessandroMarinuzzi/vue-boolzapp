@@ -82,6 +82,11 @@ input:focus-visible {
 /* /User section */
 
 /* Notifications */
+.contacts{
+    height: calc(100% - 194px);
+    overflow-y: scroll;
+}
+
 .notes{
     height: 75px;
     display: flex;

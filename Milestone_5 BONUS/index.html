@@ -62,9 +62,9 @@
                         </div>
                         <div class="contact_box">
                             <span class="contact_name">{{contact.name}}</span>
-                            <div class="last_msg color_darkgrey">{{contacts[index].messages[contacts[index].messages.length-1].text}}</div>
+                            <span class="last_msg color_darkgrey" v-if="contact.messages.length > 0">{{contacts[index].messages[contacts[index].messages.length-1].text}}</span>
                         </div>
-                        <span class="last_msgTime date color_darkgrey">{{contacts[index].messages[contacts[index].messages.length-1].date}}</span>
+                        <span class="last_msgTime date color_darkgrey" v-if="contact.messages.length > 0" >{{contacts[index].messages[contacts[index].messages.length-1].date}}</span>
                     </li>
                 </ul>
                 <!-- /Contact_Section -->
@@ -86,7 +86,7 @@
                         </div>
                         <div class="active_contactName">
                             <span>{{changingName}}</span>
-                            <span class="access_time color_darkgrey">Ultimo accesso oggi alle {{selectedContact.messages[selectedContact.messages.length -1].date}}</span>
+                            <span class="access_time color_darkgrey" v-if="selectedContact.messages.length > 0">Ultimo accesso oggi alle {{selectedContact.messages[selectedContact.messages.length -1].date}}</span>
                         </div>
                     </div>
     
@@ -105,8 +105,8 @@
                 v-for="(message, index) in selectedContact.messages"
                 :class="{ sent : message.status === 'sent', received : message.status === 'received' }">
                     <i class="fas fa-chevron-down dropdown-arrow color_darkgrey" @click="dropMenu(index)"></i>
-                    <span class="message">{{message.text}}</span>
-                    <span class="date color_darkgrey">{{ message.date}}</span>
+                    <span class="message" v-if="selectedContact.messages.length > 0">{{message.text}}</span>
+                    <span class="date color_darkgrey" v-if="selectedContact.messages.length > 0">{{ message.date}}</span>
 
                     <div class="dropdown_menu">
                         <span>Message Info</span>

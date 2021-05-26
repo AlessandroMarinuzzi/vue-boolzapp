@@ -101,7 +101,7 @@ input:focus-visible {
     align-items: center;
     font-size: 20px;
     border-radius: 50%;
-    padding: 10px;
+    padding: 13px;
     margin:0 15px;
 }
 .turnOnNotes{
@@ -140,6 +140,7 @@ input:focus-visible {
 
 /* Contacts List */
 .contact{
+    height: calc(100% / 4);
     list-style: none;
     display: flex;
     padding: 7px 0;
@@ -169,7 +170,7 @@ input:focus-visible {
 /* Main_Header */
 #site_main{
     width: 100%;
-    background-image: url("../Img/mine.jpg");
+    background-image: url("../img/mine.jpg");
     /* position: relative; */
     display: flex;
     flex-direction: column;
@@ -212,7 +213,6 @@ input:focus-visible {
     padding: 20px;
     align-self: flex-end;
     margin: 20px 80px;
-    border: 0.5px solid grey;
     border-radius: 10px;
 }
 
@@ -221,7 +221,6 @@ input:focus-visible {
     padding: 20px;
     align-self: flex-start;
     margin: 20px 80px;
-    border: 0.5px solid grey;
     border-radius: 10px;
 }
 
